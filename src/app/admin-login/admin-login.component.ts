@@ -21,17 +21,20 @@ export class AdminLoginComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.Email_entered=this.Admin_loginform.value.EmailId;
+    this.Password_entered=this.Admin_loginform.value.Password;
+    
   }
   onSubmit(){
-    //   if(this.Email!==this.Email_entered){
-    //     this.error='Invalid Email'
-    //   }
-    //   else if(this.Password!==this.Password_entered){
-    //     this.error='Invalid Password'
-    //   }
-    //   else {
-    //     this.error='Sucess'
-    //   }
+      if(this.Email!==this.Email_entered){
+        this.error='Invalid Email'
+      }
+      else if(this.Password!==this.Password_entered){
+        this.error='Invalid Password'
+      }
+      else {
+        this.error='Sucess'
+      }
     // this.router.navigate(['/'])
     }
 

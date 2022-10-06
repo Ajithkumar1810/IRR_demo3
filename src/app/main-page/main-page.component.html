@@ -21,15 +21,15 @@
                   <form class="d-grid gap-2 d-md-flex justify-content-md-end">
                     <!-- Email input -->
                     <div class="form-outline mb-4 ">
-                        <button type="submit" class="btn btn-primary btn-lg " role="presentation" routerLink='Admin_Login' routerLinkActive="active" >Admin Login</button>
+                        <button type="submit" class="btn btn-primary btn-lg " role="presentation"  [routerLink]="['Admin_Login']" routerLinkActive="active" >Admin Login</button>
                     </div>
                     <div class="form-outline mb-4">
-                        <button type="submit" class="btn btn-primary btn-lg" role="presentation" routerLink='Volunteer_Signup' routerLinkActive="active">Volunteer Signup</button>
+                        <button type="submit" class="btn btn-primary btn-lg" role="presentation" [routerLink]="['Volunteer_Signup']" routerLinkActive="active">Volunteer Signup</button>
                       </div>
           
                     <!-- Password input -->
                     <div class="form-outline mb-4">
-                        <button type="submit" class="btn btn-primary btn-lg" role="presentation" routerLink='Volunteer_Login' routerLinkActive="active">Volunteer Login</button>
+                        <button type="submit" class="btn btn-primary btn-lg" role="presentation" [routerLink]="['Volunteer_Login']" routerLinkActive="active">Volunteer Login</button>
 
                     </div>
           
