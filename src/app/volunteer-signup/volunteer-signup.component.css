@@ -1,0 +1,15 @@
+.container-fluid{
+    background-color:  rgb(28, 39, 133);
+}
+.container{
+    background-color: white;
+}
+#innerrow{
+    border-style: solid;
+}
+img{
+    border-style: groove;
+    border-color: aqua;
+    border-radius: 5vw;
+    border-width: .5vw;
+}
