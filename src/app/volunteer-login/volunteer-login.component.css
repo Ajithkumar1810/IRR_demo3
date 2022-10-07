@@ -6,10 +6,30 @@
 }
 #innerrow{
     border-style: solid;
+    
 }
 img{
     border-style: groove;
     border-color: aqua;
     border-radius: 5vw;
     border-width: .5vw;
+}
+button{
+    width: 50vw;
+    
+}
+#title{
+    font-size: 3vw;
+}
+@media (max-width: 770px){
+    button{
+        width:30vw;
+        font-size: 3vw;
+    }
+    #title{
+        font-size: 5vw;
+    }
+   
+    
+
 }

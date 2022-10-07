@@ -5,6 +5,9 @@
 .vh-100{
     background-color: white;
 }
+#topic{
+    font-size: 2.5vw;
+}
 #innerrow{
     border-style: solid;
 }
@@ -22,4 +25,22 @@ img{
 }
 #topic{
     color: white;
+}
+button{
+    width:25vw;
+    
+}
+@media (max-width: 1000px){
+    button{
+        width:20vw;
+        font-size: 2vw;
+    }
+    #topic{
+        font-size: 5vw;
+    }
+    img{
+        height: 25vh;
+    }
+  
+
 }

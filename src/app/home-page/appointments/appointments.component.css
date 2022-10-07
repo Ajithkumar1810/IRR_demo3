@@ -14,7 +14,7 @@
         flex-wrap: wrap;
     }
     tbody{
-        background-color: white;
+        background-color: rgba(208, 175, 175, 0.522);
         word-wrap: break-word;
         flex-wrap: wrap;
       

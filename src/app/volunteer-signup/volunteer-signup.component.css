@@ -13,3 +13,22 @@ img{
     border-radius: 5vw;
     border-width: .5vw;
 }
+button{
+    width: 50vw;
+    
+}
+#title{
+    font-size: 3vw;
+}
+@media (max-width: 770px){
+    button{
+        width:20vw;
+        font-size: 2vw;
+    }
+    #title{
+        font-size: 5vw;
+    }
+    img{
+        height: 15vh;
+    }
+}
