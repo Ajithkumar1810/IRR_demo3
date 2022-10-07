@@ -34,7 +34,9 @@
                      
             
                       <!-- Submit button -->
-                      <button type="submit" class="btn btn-primary m-3" (click)="onSubmit()" [routerLink]="['home']" >Login</button>
+                      <button type="button" class="btn btn-primary m-3"  (click)="onSubmit()">Login</button>
+                      <!-- role="presentation" routerLinkActive="active" [routerLink]="['/Home_Page']" -->
+                      
                       <button type="button" class="btn btn-primary " role="presentation" [routerLink]="['']" routerLinkActive="active">Cancel</button>
                 
                     </form>

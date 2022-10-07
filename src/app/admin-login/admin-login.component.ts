@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-admin-login',
   templateUrl: './admin-login.component.html',
@@ -12,7 +13,7 @@ export class AdminLoginComponent implements OnInit {
   Email_entered=''
   Password_entered=''
   error=''
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,private router: Router,) {
     this.Admin_loginform=this.formBuilder.group({
       EmailId:[''],
       Password:['']
@@ -26,16 +27,16 @@ export class AdminLoginComponent implements OnInit {
     
   }
   onSubmit(){
-      if(this.Email!==this.Email_entered){
-        this.error='Invalid Email'
-      }
-      else if(this.Password!==this.Password_entered){
-        this.error='Invalid Password'
-      }
-      else {
-        this.error='Sucess'
-      }
-    // this.router.navigate(['/'])
+      // if(this.Email!==this.Email_entered){
+      //   this.error='Invalid Email'
+      // }
+      // else if(this.Password!==this.Password_entered){
+      //   this.error='Invalid Password'
+      // }
+      // else {
+      //   this.error='Sucess'
+      // }
+    this.router.navigate(['/Home_Page'])
     }
 
 }

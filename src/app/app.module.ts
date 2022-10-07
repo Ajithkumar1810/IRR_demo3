@@ -10,6 +10,11 @@ import { VolunteerSignupComponent } from './volunteer-signup/volunteer-signup.co
 import { MainPageComponent } from './main-page/main-page.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomePageComponent } from './home-page/home-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { VolunteersListComponent } from './home-page/volunteers-list/volunteers-list.component';
+import { AppointmentsComponent } from './home-page/appointments/appointments.component';
+import { SlotsComponent } from './home-page/slots/slots.component';
 
 
 @NgModule({
@@ -18,7 +23,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     AdminLoginComponent,
     VolunteerLoginComponent,
     VolunteerSignupComponent,
-    MainPageComponent
+    MainPageComponent,
+    HomePageComponent,
+    NavbarComponent,
+    VolunteersListComponent,
+    AppointmentsComponent,
+    SlotsComponent
   ],
   imports: [
     BrowserModule,
