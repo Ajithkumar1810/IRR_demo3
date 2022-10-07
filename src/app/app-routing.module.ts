@@ -12,6 +12,11 @@ const routes: Routes = [
   {path:'Volunteer_Login',component:VolunteerLoginComponent},
   {path:'Volunteer_Signup',component:VolunteerSignupComponent,},
   {path:'Home_Page',component:HomePageComponent},
+  {
+    path: 'Home_Page',
+    loadChildren: () =>
+      import('./home-page/home-page.module').then((m) => m.HomePageModule)
+  },
  
 ];
 

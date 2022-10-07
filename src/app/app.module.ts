@@ -11,10 +11,15 @@ import { MainPageComponent } from './main-page/main-page.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomePageComponent } from './home-page/home-page.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { VolunteersListComponent } from './home-page/volunteers-list/volunteers-list.component';
 import { AppointmentsComponent } from './home-page/appointments/appointments.component';
 import { SlotsComponent } from './home-page/slots/slots.component';
+
+import { NgxPaginationModule } from 'ngx-pagination';
+import { HttpClientModule } from '@angular/common/http';
+import { HomePageModule } from './home-page/home-page.module';
+import { ProfileComponent } from './home-page/profile/profile.component';
+
 
 
 @NgModule({
@@ -25,17 +30,21 @@ import { SlotsComponent } from './home-page/slots/slots.component';
     VolunteerSignupComponent,
     MainPageComponent,
     HomePageComponent,
-    NavbarComponent,
     VolunteersListComponent,
     AppointmentsComponent,
-    SlotsComponent
+    SlotsComponent,
+    ProfileComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxPaginationModule,
+    HttpClientModule,
+    HomePageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

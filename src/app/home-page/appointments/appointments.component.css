@@ -1,0 +1,32 @@
+#subbox{
+    /* background-color: rgb(122, 207, 207); */
+    background-color: white;
+    /* background-color:  rgb(28, 39, 133); */
+
+    }
+    /* #AppointmentPage{
+        background-color:  rgb(28, 39, 133);
+    } */
+    thead{
+        background-color: black;
+        color: azure;
+        word-wrap: break-word;
+        flex-wrap: wrap;
+    }
+    tbody{
+        background-color: white;
+        word-wrap: break-word;
+        flex-wrap: wrap;
+      
+    }
+    form{
+        padding-top: 2vh;
+    /* background-color: rgb(122, 207, 207); */
+    background-color:  rgb(28, 39, 133);
+    color: white;
+    
+    }
+    /* .pagination{
+        
+    
+    } */

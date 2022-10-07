@@ -20,10 +20,13 @@
           </li>
           <li class="nav-item" role="presentation" [routerLink]="['Home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
             
-            <a class="nav-link fs-5"  >Home</a>
+            <a class="nav-link fs-5" (click)="onClickVolunteers()" >Volunteers</a>
           </li>
-          <li class="nav-item" role="presentation" [routerLink]="['Appoinment_Details']"  routerLinkActive="active">
+          <li class="nav-item" (click)="onClickAppointments()">
             <a class="nav-link fs-5"  >Appointments</a>
+          </li>
+          <li class="nav-item" (click)="onClickSlots()">
+            <a class="nav-link fs-5"  >Slots</a>
           </li>
           
          
@@ -38,13 +41,13 @@
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
           
           <li><a class="dropdown-item">
-            <div class="input-group"  [routerLink]="['Profile']">
+            <div class="input-group" (click)="onClickProfile()">
              <a  routerLinkActive="active"> <span class="material-icons">person</span> <label class="m-2" id="Profile"  >Profile</label></a>
             </div>
 
             </a></li>
           <li><a class="dropdown-item" >
-          <div class="input-group" [routerLink]="['']">
+          <div class="input-group" (click)="onClickLogout()">
             <a routerLinkActive="active"><span class="material-icons">exit_to_app</span> <label class="m-2" id="Logout">Logout </label></a>
           </div>  
           </a></li>
@@ -56,9 +59,9 @@
   </nav>
 
 
- <div class="row">
+ <!-- <div class="row">
     <router-outlet></router-outlet>
- </div>
+ </div> -->
   
     </div>
 </div>

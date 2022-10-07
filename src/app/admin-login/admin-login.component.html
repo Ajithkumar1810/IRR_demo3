@@ -20,25 +20,26 @@
                     <form [formGroup]="Admin_loginform" >
                       <!-- Email input -->
                       <div class="form-outline mb-4">
-                        <input type="email" id="form1Example13" class="form-control form-control-lg"  formControlName="EmailId" />
                         <label class="form-label " for="form1Example13">Email address</label>
+                        <input type="email" id="form1Example13" class="form-control form-control-lg"  formControlName="EmailId" />
                       </div>
             
                       <!-- Password input -->
                       <div class="form-outline mb-4">
-                        <input type="password" id="form1Example23" class="form-control form-control-lg" formControlName='Password'/>
                         <label class="form-label " for="form1Example23">Password</label>
+                        <input type="password" id="form1Example23" class="form-control form-control-lg" formControlName='Password'/>
                       </div>
                       <span id="error">{{error}}</span>
                       <br>
                      
-            
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      
                       <!-- Submit button -->
-                      <button type="button" class="btn btn-primary m-3"  (click)="onSubmit()">Login</button>
+                      <button type="button" class="btn btn-primary me-3"  (click)="onSubmit()">Login</button>
                       <!-- role="presentation" routerLinkActive="active" [routerLink]="['/Home_Page']" -->
                       
                       <button type="button" class="btn btn-primary " role="presentation" [routerLink]="['']" routerLinkActive="active">Cancel</button>
-                
+                </div>
                     </form>
                   </div>
                 </div>

@@ -1,1 +1,158 @@
-<p>appointments works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <app-home-page></app-home-page>
+    </div>
+    <div class="row" id="AppointmentPage">
+        <div class="container-fluid" id="subbox">
+  
+                <div class="row" id="title">
+                  <h2 class="fw-bolder text-center">Appointments</h2>
+                </div>
+              
+                
+                <div class="row mb-4" id="Filters">
+                  <!-- <h4>Filter By:</h4> -->
+                  
+                  <form class="border border-3 mb-3" [formGroup]="filterDetailsForm">
+                  <div class="row mb-3" id="inputs">
+                    
+                    <div class="col-3">
+                      <label for="exampleName1" class="form-label fw-bolder fw-bolder">BookingID:</label>
+              
+                    </div>
+                    <div class="col-3">
+                      <label for="exampleName1" class="form-label fw-bolder">Phone Number:</label>
+              
+                    </div>
+                    <div class="col-3">
+                      <label for="exampleName1" class="form-label fw-bolder">Full Name:</label>
+              
+                    </div>
+                    <div class="col-3">
+                      <label for="exampleName1" class="form-label fw-bolder">From:</label>
+              
+                    </div>
+                    <div class="col-3 mb-3">
+                     
+                        <input type="text" class="form-control"  placeholder="BookingID" formControlName="bookingId">
+                      
+                    </div>
+                    <div class="col-3 mb-3">
+                     
+                        <input type="text" class="form-control"  placeholder="PhoneNumber" formControlName="phoneNumber">
+                       
+                    </div>
+                    <div class="col-3 mb-3">
+                      
+                        <input type="text" class="form-control"  placeholder="Name" formControlName="fullName">
+                      
+                    </div>
+                    <div class="col-3 mb-3">
+                      
+                        <input type="date" class="form-control"  placeholder="appoinmentDatefrom" formControlName="appoinmentDatefrom">
+                      
+                    </div>
+                  </div>
+                  <div class="row mb-3" id="inputs">
+                    <div class="col-3 mb-3">
+                      
+                        <label for="exampleName1" class="form-label fw-bolder">To:</label>
+                        <input type="date" class="form-control"  placeholder="appoinmentDateto" formControlName="appoinmentDateto">
+                       
+                    </div>
+                    <div class="col-3 mb-3">
+                      
+                        <label for="exampleName1" class="form-label fw-bolder">Day:</label>
+                        <input type="text" class="form-control"  placeholder="Day" formControlName="day">
+                       
+                    </div>
+                    <div class="col-3 mb-3">
+                     
+                        <label for="exampleName1" class="form-label fw-bolder">Time:</label>
+                        <input type="time" class="form-control"  placeholder="Time" formControlName="time">
+                      
+                    </div>
+                    
+                    <div class="col-3 mb-3">
+                     
+                        <label for="exampleName1" class="form-label fw-bolder">Fin:</label>
+                        <input type="text" class="form-control"  placeholder="Fin" formControlName="fin">
+                      
+                    </div>
+                  </div>
+              
+              
+                  <div class="row">
+                    <div class="col-9"></div>
+                <div class="col-3">
+                  <button type="button" class="btn btn-success col-8 mb-4" (click)="onSubmit()">Filter</button>
+              
+                </div>
+                  </div>
+                </form>
+                </div>
+                
+                <div class="row mb-4 table-responsive-sm ">
+                  <table class="table " ng-controller="userCtrl">
+                    <thead >
+                      <tr>
+                        <th scope="col">SI.no</th>
+                        <th scope="col">BookingID</th>
+                        <th scope="col">Phone No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Day</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">TTL_Tag</th>
+                        <th scope="col">Fin</th>
+              
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let info of sample | paginate:{itemsPerPage:pagepersheetno,currentPage:pageno,totalItems:totallength}">
+                      
+                      
+                      
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>{{info.BookingID}}</td>
+                        <td>{{info.PhoneNumber}}</td>
+                        <td>{{info.FullName}}</td>
+                        <td>{{info.Date}}</td>
+                        <td>{{info.Day_of_the_week}}</td>
+                        <td>{{info.Time}}</td>
+                        <td>{{info.TTL_Tag}}</td>
+                        <td>{{info.Fin}}</td>
+                      </tr>
+              
+                    
+                    </tbody>
+                   
+                  </table> 
+                
+                  
+                </div>
+                <div class="row mb-5">
+                 
+                  <div class="col-2 d-flex flex-row">
+                    <div class="input-group mb-3 border ">
+                      <span class="input-group-text btn-secondary" id="basic-addon1"><span class="material-icons">auto_awesome_motion</span></span>
+                      <input type="number"  min="0" class="form-control" placeholder="3" aria-label="Username" aria-describedby="basic-addon1" (input)="onPagepersheet($event)">
+                    </div>
+                  </div>
+                  <div class="col-1"></div>
+                  <div class="col-7 d-flex justify-content-center">
+                  <pagination-controls class="pagination fw-bolder"  (pageChange)="pageno=$event"></pagination-controls>
+                  <!-- <mat-paginator [length]="100"
+                  [pageSize]="10"
+                  [pageSizeOptions]="[5, 10, 25, 100]"
+                  aria-label="Select page">
+              </mat-paginator> -->
+                  
+              
+                  </div>
+              
+                </div>
+              </div>
+              
+    </div>
+</div>

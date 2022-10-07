@@ -1,0 +1,13 @@
+#innerbox{
+    background-color: white;
+    padding-bottom: 12vh;
+}
+.container{
+    border-style: solid;
+    background-color:  rgb(28, 39, 133);
+
+}
+label{
+    font-size: 1vw;
+    color: white;
+}
