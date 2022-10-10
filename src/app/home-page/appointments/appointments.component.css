@@ -14,7 +14,7 @@
         flex-wrap: wrap;
     }
     tbody{
-        background-color: rgba(208, 175, 175, 0.522);
+        background-color: rgba(203, 195, 195, 0.522);
         word-wrap: break-word;
         flex-wrap: wrap;
       
@@ -30,3 +30,4 @@
         
     
     } */
+    button{cursor: pointer;}

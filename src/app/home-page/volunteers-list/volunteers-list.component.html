@@ -2,8 +2,129 @@
     <div class="row">
         <app-home-page></app-home-page>
     </div>
-    <div class="row">
-<p>volunteers-list works!</p>
-
+    <div class="row" id="Volunteers">
+        <div class="container-fluid" id="subbox">
+  
+                <div class="row" id="title">
+                  <h2 class="fw-bolder text-center">Volunteers Details</h2>
+                </div>
+              
+                
+                <div class="row mb-4" id="Filters">
+                  <!-- <h4>Filter By:</h4> -->
+                  
+                  <form class="border border-3 mb-3" [formGroup]="filterDetailsForm">
+                  <div class="row mb-3" id="inputs">
+                    
+                    <div class="col-3">
+                      <label for="exampleName1" class="form-label fw-bolder fw-bolder">Name:</label>
+              
+                    </div>
+                    <div class="col-3">
+                      <label for="exampleName1" class="form-label fw-bolder">Email:</label>
+              
+                    </div>
+                    <div class="col-3">
+                      <label for="exampleName1" class="form-label fw-bolder">Phone no:</label>
+              
+                    </div>
+                    <div class="col-3">
+                      <label for="exampleName1" class="form-label fw-bolder">Fin:</label>
+              
+                    </div>
+                    <div class="col-3 mb-3">
+                     
+                        <input type="text" class="form-control"  placeholder="Name" formControlName="Name">
+                      
+                    </div>
+                    <div class="col-3 mb-3">
+                     
+                        <input type="email" class="form-control"  placeholder="Email" formControlName="Email">
+                       
+                    </div>
+                    <div class="col-3 mb-3">
+                      
+                        <input type="number" class="form-control"  placeholder="Phone no" formControlName="Phoneno">
+                      
+                    </div>
+                    <div class="col-3 mb-3">
+                      
+                        <input type="number" class="form-control"  placeholder="Fin" formControlName="Fin">
+                      
+                    </div>
+                  </div>
+                 
+              
+              
+                  <div class="row">
+                    <div class="col-9"></div>
+                <div class="col-3">
+                  <button type="button" class="btn btn-success col-8 mb-4" (click)="onSubmit()">Filter</button>
+              
+                </div>
+                  </div>
+                </form>
+                </div>
+                
+                <div class="row mb-4 table-responsive-sm ">
+                  <table class="table " ng-controller="userCtrl">
+                    <thead >
+                      <tr>
+                        <th scope="col">SI.no</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone No</th>
+                        <th scope="col">Fin</th>
+                        <th>Appoint</th>
+                        <th>Active</th>
+                        <th>Password</th>
+              
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let info of sample | paginate:{itemsPerPage:pagepersheetno,currentPage:pageno,totalItems:totallength};let i =  index;">
+                      
+                      
+                      
+                      <tr>
+                        <th scope="row">{{i}}</th>
+                        <td>{{info.Name}}</td>
+                        <td>{{info.Email}}</td>
+                        <td>{{info.Phoneno}}</td>
+                        <td>{{info.Fin}}</td>
+                        <td><input type="checkbox" ></td>
+                        <td><span class="btn btn-danger" id="Active">Not this week</span></td>
+                        <td><label>Expired</label></td>
+                      </tr>
+              
+                    
+                    </tbody>
+                   
+                  </table> 
+                
+                  
+                </div>
+                <div class="row mb-5">
+                 
+                  <div class="col-2 d-flex flex-row">
+                    <div class="input-group mb-3 border ">
+                      <span class="input-group-text btn-secondary" id="basic-addon1"><span class="material-icons">auto_awesome_motion</span></span>
+                      <input type="number"  min="0" class="form-control" placeholder="3" aria-label="Username" aria-describedby="basic-addon1" (input)="onPagepersheet($event)">
+                    </div>
+                  </div>
+                  <div class="col-1"></div>
+                  <div class="col-7 d-flex justify-content-center">
+                  <pagination-controls class="pagination fw-bolder"  (pageChange)="pageno=$event"></pagination-controls>
+                  <!-- <mat-paginator [length]="100"
+                  [pageSize]="10"
+                  [pageSizeOptions]="[5, 10, 25, 100]"
+                  aria-label="Select page">
+              </mat-paginator> -->
+                  
+              
+                  </div>
+              
+                </div>
+              </div>
+              
     </div>
 </div>

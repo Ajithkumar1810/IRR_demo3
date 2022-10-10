@@ -16,6 +16,7 @@ img{
 }
 button{
     width: 50vw;
+    cursor: pointer;
     
 }
 #title{

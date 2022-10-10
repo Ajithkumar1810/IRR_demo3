@@ -28,6 +28,7 @@ img{
 }
 button{
     width:25vw;
+    cursor: pointer;
     
 }
 @media (max-width: 1000px){
