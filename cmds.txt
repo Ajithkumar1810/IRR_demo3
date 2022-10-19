@@ -1,0 +1,13 @@
+insert the bootstrap link 5.2 in index.html
+
+npm install --save-exact express@4.17.1 cors@2.8.5 mysql@2.18.1
+
+npm i material-icons  
+
+ng add @angular/material      
+
+npm i bootstrap-icons 
+
+npm i ngx-pagination
+
+ npm install api-ai-javascript -D

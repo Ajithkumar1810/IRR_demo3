@@ -35,3 +35,9 @@
         font-size: .8vw;
     }
     button{cursor: pointer;}
+    #appointmentstatus{
+        cursor: pointer;
+    }
+    span{
+        cursor:unset;
+    }

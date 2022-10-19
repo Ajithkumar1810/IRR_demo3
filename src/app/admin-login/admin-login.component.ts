@@ -12,7 +12,8 @@ export class AdminLoginComponent implements OnInit {
   Password='shekar123'
   Email_entered=''
   Password_entered=''
-  error=''
+  emailerror=''
+  passworderror=''
   constructor(private formBuilder: FormBuilder,private router: Router,) {
     this.Admin_loginform=this.formBuilder.group({
       EmailId:[''],
@@ -24,19 +25,26 @@ export class AdminLoginComponent implements OnInit {
   ngOnInit(): void {
     this.Email_entered=this.Admin_loginform.value.EmailId;
     this.Password_entered=this.Admin_loginform.value.Password;
+   
     
   }
   onSubmit(){
-      // if(this.Email!==this.Email_entered){
-      //   this.error='Invalid Email'
-      // }
-      // else if(this.Password!==this.Password_entered){
-      //   this.error='Invalid Password'
-      // }
-      // else {
-      //   this.error='Sucess'
-      // }
-    this.router.navigate(['/Home_Page'])
+    this.Email_entered=this.Admin_loginform.value.EmailId;
+    this.Password_entered=this.Admin_loginform.value.Password;
+      if(this.Email!==this.Email_entered){
+        this.emailerror='Invalid Email'
+        this.passworderror=''
+      }
+      else if(this.Password!==this.Password_entered){
+        this.passworderror='Invalid Password'
+        this.emailerror=''
+      }
+      else {
+        this.passworderror=''
+        this.emailerror=''
+        this.router.navigate(['/Home_Page'])
+      }
+    
     }
 
 }

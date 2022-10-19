@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  UserName='Ajith Kumar'
-  UserEmail='ajith@gmail.com'
- UserPassword='Password123'
+  name='Ajith Kumar'
+  email='ajith@gmail.com'
+phone='Password123'
   constructor() { }
 
   ngOnInit(): void {

@@ -10,40 +10,41 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class VolunteersListComponent implements OnInit {
 
   
+  
   sample:any=[
     {
         Name:'AjithKumar',
         Email:'ajith@gmail.com',
         Phoneno:'9874563210',
-        Fin:'748'
+        Address:'Vellore'
     },
     {
       Name:'raviKumar',
       Email:'ravi@gmail.com',
       Phoneno:'7414563210',
-      Fin:'418'
+      Address:'Chennai'
     },
     {
       Name:'harihKumar',
       Email:'hari@gmail.com',
       Phoneno:'9879633210',
-      Fin:'741'
+      Address:'Delhi'
     },
     {
       Name:'parthiban',
       Email:'parthi@gmail.com',
       Phoneno:'9885263210',
-      Fin:'718'
+      Address:'Mumbai'
     },
     {
       Name:'sana',
         Email:'sana@gmail.com',
         Phoneno:'9874741210',
-        Fin:'518'
+        Address:'Pune'
     }
 ]
   title = 'IRR_Appoinments';
-  object:any=[{  name:'',email:'', phoneNumber:'',fin:''}]
+  object:any=[{  name:'',email:'', phoneNumber:'',address:''}]
   
    pagepersheetno=3
    pageno=1;
@@ -57,7 +58,7 @@ export class VolunteersListComponent implements OnInit {
        Name:[""],
        Phoneno:[''],
        Email:[''],
-       Fin:[''],
+       Address:[''],
  
      })   
    }
