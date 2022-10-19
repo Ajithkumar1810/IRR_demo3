@@ -1,16 +1,16 @@
-import { getNumberOfCurrencyDigits } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { MatTableDataSource } from '@angular/material/table';
-import { map } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
+
 @Component({
-  selector: 'app-appointments',
-  templateUrl: './appointments.component.html',
-  styleUrls: ['./appointments.component.css']
+  selector: 'app-appoinments-page',
+  templateUrl: './appoinments-page.component.html',
+  styleUrls: ['./appoinments-page.component.css']
 })
-export class AppointmentsComponent implements OnInit {
+export class AppoinmentsPageComponent implements OnInit {
+
   data: any;
   test: any;
   test1:string='';
@@ -29,7 +29,7 @@ export class AppointmentsComponent implements OnInit {
   filterDetailsForm!: FormGroup;
 
 
-  constructor(private formBuilder: FormBuilder, private http: HttpClient) {
+  constructor(private formBuilder: FormBuilder, private http: HttpClient,private router:Router ,private route:ActivatedRoute) {
     this.filterDetailsForm = this.formBuilder.group({
       bookingId: [""],
       phoneNumber: [''],
@@ -75,6 +75,13 @@ export class AppointmentsComponent implements OnInit {
     this.object.time = this.filterDetailsForm.value.time
     this.object.appoinmentDateto = this.filterDetailsForm.value.appoinmentDateto
     this.object.fin = this.filterDetailsForm.value.fin
+  }
+
+  onClickProfile(){
+    this.router.navigate(['/VolunteerProfile'],{relativeTo:this.route})
+  }
+  onClickLogout(){
+    this.router.navigate(['/'],{relativeTo:this.route})
   }
   onPagepersheet(value: Event) {
     this.pagepersheetno = parseInt((<HTMLInputElement>value.target).value, 10)

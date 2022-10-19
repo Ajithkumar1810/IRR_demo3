@@ -1,8 +1,76 @@
 <div class="container-fluid">
-    <div class="row">
+    <!-- <div class="row">
         <app-home-page></app-home-page>
+    </div> -->
+    <div class="container-flex">
+        <div class="row">
+            <div class="container-fluid" id="header">
+                <br>
+                <h1>IRR Chatbot Portal</h1>
+            </div>
+        </div>
+        <div class="row">
+            
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <div class="container-fluid" id="bar">
+         <img src="https://media-exp1.licdn.com/dms/image/C560BAQHUBkljpTMn5g/company-logo_200_200/0/1662110406202?e=2147483647&v=beta&t=nFe5HatKhK6ykRsa-LigLEEaLU9S9sGmzx0TBOCeIeg" class="img-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav" >
+            <!-- <ul class="navbar-nav">
+              <li class="nav-item">
+               
+              </li>
+              <li class="nav-item" role="presentation" [routerLink]="['Home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                
+                <a class="nav-link fs-5" (click)="onClickVolunteers()" >Volunteers</a>
+              </li>
+              <li class="nav-item" (click)="onClickAppointments()">
+                <a class="nav-link fs-5"  >Appointments</a>
+              </li>
+              <li class="nav-item" (click)="onClickSlots()">
+                <a class="nav-link fs-5"  >Slots</a>
+              </li>
+              
+             
+            </ul> -->
+                  
+          </div>
+          <div class="dropdown ">
+            
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              USER
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+              
+              <li><a class="dropdown-item">
+                <div class="input-group" (click)="onClickProfile()">
+                 <a  routerLinkActive="active"> <span class="material-icons">person</span> <label class="m-2" id="Profile"  >Profile</label></a>
+                </div>
+    
+                </a></li>
+              <li><a class="dropdown-item" >
+              <div class="input-group" (click)="onClickLogout()">
+                <a routerLinkActive="active"><span class="material-icons">exit_to_app</span> <label class="m-2" id="Logout">Logout </label></a>
+              </div>  
+              </a></li>
+            </ul>
+          
+          
+        </div>
+        </div>
+      </nav>
+    
+    
+     <!-- <div class="row">
+        <router-outlet></router-outlet>
+     </div> -->
+      
+        </div>
     </div>
-    <div class="row" id="AppointmentPage">
+    
+    <div class="row m-3 py-5" id="AppointmentPage">
         <div class="container-fluid" id="subbox">
   
                 <div class="row" id="title">

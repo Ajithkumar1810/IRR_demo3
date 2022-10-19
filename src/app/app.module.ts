@@ -19,6 +19,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePageModule } from './home-page/home-page.module';
 import { ProfileComponent } from './home-page/profile/profile.component';
+import { AppoinmentsPageComponent } from './volunteer-login/appoinments-page/appoinments-page.component';
+import { VolunteerLoginModule } from './volunteer-login/volunteer-login.module';
 
 
 
@@ -34,6 +36,7 @@ import { ProfileComponent } from './home-page/profile/profile.component';
     AppointmentsComponent,
     SlotsComponent,
     ProfileComponent,
+    AppoinmentsPageComponent
 
   ],
   imports: [
@@ -45,6 +48,8 @@ import { ProfileComponent } from './home-page/profile/profile.component';
     NgxPaginationModule,
     HttpClientModule,
     HomePageModule,
+    VolunteerLoginModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

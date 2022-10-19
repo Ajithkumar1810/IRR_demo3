@@ -17,6 +17,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./home-page/home-page.module').then((m) => m.HomePageModule)
   },
+  {
+    path: 'Volunteer_Login',
+    loadChildren: () =>
+      import('./volunteer-login/volunteer-login.module').then((m) => m.VolunteerLoginModule)
+  },
  
 ];
 
