@@ -44,7 +44,18 @@
                       <!-- role="presentation" routerLinkActive="active" [routerLink]="['/Home_Page']" -->
                       
                       <button type="button" class="btn btn-primary " role="presentation" [routerLink]="['']" routerLinkActive="active">Cancel</button>
-                </div>
+                      </div>
+                      <br>
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      
+                        <!-- Submit button -->
+                        <button type="button" class="btn btn-primary me-3"  (click)="onclickemail()">Register</button>
+                        <!-- role="presentation" routerLinkActive="active" [routerLink]="['/Home_Page']" -->
+                        <button type="button" class="btn btn-primary "  (click)="onvalidateemail()">Signin</button>
+                        <button type="button" class="btn btn-primary "  (click)="onoutemail()">Logout</button>
+
+                        
+                        </div>
                     </form>
                   </div>
                 </div>

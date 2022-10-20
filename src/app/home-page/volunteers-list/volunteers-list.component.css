@@ -33,11 +33,15 @@
     #Active{
         border-radius: 5vw;
         font-size: .8vw;
+        /* cursor: pointer; */
+    }
+    #appointing{
+        border-radius: 5vw;
+        font-size: .8vw;
+        
     }
     button{cursor: pointer;}
-    #appointmentstatus{
-        cursor: pointer;
-    }
+   
     span{
         cursor:unset;
     }
