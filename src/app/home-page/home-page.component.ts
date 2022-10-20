@@ -15,8 +15,17 @@ export class HomePageComponent implements OnInit {
   onClickAppointments(){
     this.router.navigate(['/Appointments'],{relativeTo:this.route})
   }
-  onClickVolunteers(){
-    this.router.navigate(['/Volunteers'],{relativeTo:this.route})
+  onClickVolunteersList(){
+    this.router.navigate(['/Volunteers_list'],{relativeTo:this.route})
+  }
+  onClickVolunteersrequest(){
+    this.router.navigate(['/Volunteers_Request'],{relativeTo:this.route})
+
+  }
+  
+  onClickVolunteersAppointed(){
+    this.router.navigate(['/Volunteers_Appointed'],{relativeTo:this.route})
+
   }
   onClickSlots(){
     this.router.navigate(['/Slots'],{relativeTo:this.route})

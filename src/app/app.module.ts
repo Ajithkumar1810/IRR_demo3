@@ -21,6 +21,8 @@ import { HomePageModule } from './home-page/home-page.module';
 import { ProfileComponent } from './home-page/profile/profile.component';
 import { AppoinmentsPageComponent } from './volunteer-login/appoinments-page/appoinments-page.component';
 import { VolunteerLoginModule } from './volunteer-login/volunteer-login.module';
+import { VolunteerRequestComponent } from './home-page/volunteer-request/volunteer-request.component';
+import { VolunteerAppointedComponent } from './home-page/volunteer-appointed/volunteer-appointed.component';
 
 
 
@@ -36,7 +38,9 @@ import { VolunteerLoginModule } from './volunteer-login/volunteer-login.module';
     AppointmentsComponent,
     SlotsComponent,
     ProfileComponent,
-    AppoinmentsPageComponent
+    AppoinmentsPageComponent,
+    VolunteerRequestComponent,
+    VolunteerAppointedComponent,
 
   ],
   imports: [

@@ -7,7 +7,7 @@
     </div>
     <div class="row">
         
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
     <div class="container-fluid">
      <img src="https://media-exp1.licdn.com/dms/image/C560BAQHUBkljpTMn5g/company-logo_200_200/0/1662110406202?e=2147483647&v=beta&t=nFe5HatKhK6ykRsa-LigLEEaLU9S9sGmzx0TBOCeIeg" class="img-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,7 +20,36 @@
           </li>
           <li class="nav-item" role="presentation" [routerLink]="['Home']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
             
-            <a class="nav-link fs-5" (click)="onClickVolunteers()" >Volunteers</a>
+            <!-- <a class="nav-link fs-5" (click)="onClickVolunteers()" >Volunteers</a> -->
+            <div class="dropdown ">
+            <a class="nav-link fs-5 " id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false" >Volunteers</a>
+            <!-- dropdown-toggle -->
+        
+              
+              <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton2">
+                
+                <li><a class="dropdown-item">
+                  <div class="input-group" (click)=" onClickVolunteersrequest()">
+                   <a  routerLinkActive="active">  <label class="m-2" id="Profile"  >Volunteers Request</label></a>
+                  </div>
+      
+                  </a></li>
+                <li><a class="dropdown-item" >
+                <div class="input-group" (click)=" onClickVolunteersList()">
+                  <a routerLinkActive="active"> <label class="m-2" id="Logout">Volunteers List</label></a>
+                </div>  
+                </a></li>
+
+                <li><a class="dropdown-item" >
+                  <div class="input-group" (click)=" onClickVolunteersAppointed()">
+                    <a routerLinkActive="active"> <label class="m-2" id="Logout">Volunteers Appointed</label></a>
+                  </div>  
+                  </a></li>
+                
+              </ul>
+            
+            
+          </div>
           </li>
           <li class="nav-item" (click)="onClickAppointments()">
             <a class="nav-link fs-5"  >Appointments</a>

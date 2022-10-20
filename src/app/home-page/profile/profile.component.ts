@@ -10,6 +10,7 @@ export class ProfileComponent implements OnInit {
   name='Ajith Kumar'
   email='ajith@gmail.com'
 phone='Password123'
+sample:any;
   constructor() { }
 
   ngOnInit(): void {

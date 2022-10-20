@@ -1,0 +1,61 @@
+<div class="container-fluid">
+    <div class="row">
+        <app-home-page></app-home-page>
+    </div>
+    <div class="row" id="Volunteers" >
+        <div class="container-fluid  py-5" id="subbox">
+  
+                <div class="row" id="title">
+                  <h2 class="fw-bolder text-center">Volunteers Appointed</h2>
+                </div>
+              
+                
+               
+                
+                <div class="row mb-4 table-responsive-sm ">
+                  <table class="table " ng-controller="userCtrl">
+                    <thead >
+                      <tr>
+                        <th scope="col">SI.no</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone No</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Password</th>
+
+                        
+              
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let info of sample | paginate:{itemsPerPage:pagepersheetno,currentPage:pageno,totalItems:totallength};let i =  index;">
+                      
+                      
+                      
+                      <tr>
+                        <th scope="row">{{i}}</th>
+                        <td>{{info.Name}}</td>
+                        <td>{{info.Email}}</td>
+                        <td>{{info.Phoneno}}</td>
+                        <td>{{info.Address}}</td>
+                        <!-- <td><input type="checkbox" id="appointmentstatus"></td> -->
+                        <td><span class="btn btn-warning" id="date">{{info.Date}}</span></td>
+                        <td><span class="btn btn-info" id="password">{{info.Password}}</span></td>
+                        <!-- <td>{{info.Password}}</td> -->
+                        
+                        <!-- <td><span class="btn btn-danger" id="Active">Not this week</span></td> -->
+                        <!-- <td><label>Expired</label></td> -->
+                      </tr>
+              
+                    
+                    </tbody>
+                   
+                  </table> 
+                
+                  
+                </div>
+                
+              </div>
+              
+    </div>
+</div>

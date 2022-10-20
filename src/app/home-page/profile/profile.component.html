@@ -1,15 +1,56 @@
 <div class="container-fluid">
-    <div class="row">
-        <app-home-page></app-home-page>
-    </div>
-    <div class="row" id="profile">
-      <div class="row" id="title">
-        <h1 class="fw-bolder text-center">USER</h1>
-      </div>
-      <div class="row">
-        <section>
-         
-        </section>
-      </div>
-    </div>
+  <div class="row">
+      <app-home-page></app-home-page>
+  </div>
+  <div class="row m-5" id="Volunteers" >
+      <div class="container-fluid  py-5" id="subbox">
+
+              <div class="row" id="title">
+                <h2 class="fw-bolder text-center">Volunteers Appointed</h2>
+              </div>
+            
+              
+             
+              <div class="row">
+                <div class="row mb-4 table-responsive-sm ">
+                  <table class="row table " ng-controller="userCtrl">
+                    <thead >
+                      <tr>
+                        
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone No</th>
+                        <th scope="col">Address</th>
+                        
+  
+                        
+              
+                      </tr>
+                    </thead>
+                    <tbody class="row" *ngFor="let info of sample let i =  index;">
+                      
+                      
+                      
+                      <tr>
+                        
+                        <td>{{info.Name}}</td>
+                        <td>{{info.Email}}</td>
+                        <td>{{info.Phoneno}}</td>
+                        <td>{{info.Address}}</td>
+                      
+                      </tr>
+              
+                    
+                    </tbody>
+                   
+                  </table> 
+                
+                  
+                </div>
+              </div>
+              
+              
+            </div>
+            
+  </div>
 </div>

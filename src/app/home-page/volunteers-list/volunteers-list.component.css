@@ -14,7 +14,7 @@
         flex-wrap: wrap;
     }
     tbody{
-        background-color: rgba(203, 195, 195, 0.522);
+        background-color: white;
         word-wrap: break-word;
         flex-wrap: wrap;
       
@@ -22,9 +22,14 @@
     form{
         padding-top: 2vh;
     /* background-color: rgb(122, 207, 207); */
-    background-color:  rgb(28, 39, 133);
-    color: white;
+    background-color:  white;
+    /* color: white; */
     
+    }
+    input{
+        border-style: solid;
+        border-width: .2vw;
+        border-color: black;
     }
     /* .pagination{
         
@@ -45,3 +50,10 @@
     span{
         cursor:unset;
     }
+    #subbox{
+        background-color:  rgb(28, 39, 133);
+    
+        }
+        h2{
+            color: white;
+           }

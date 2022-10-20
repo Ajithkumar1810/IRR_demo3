@@ -30,16 +30,14 @@
         
     
     } */
-    #password{
+    #cancel{
         border-radius: 5vw;
         font-size: .8vw;
-       
+        /* cursor: pointer; */
     }
-    #date{
+    #appointing{
         border-radius: 5vw;
         font-size: .8vw;
-       
-
         
     }
     button{cursor: pointer;}
